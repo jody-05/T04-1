@@ -183,5 +183,149 @@
 			</svg>
 		</div>
 	</figure>
+
+	<figure id="scene-adjusted-figure">
+		<figcaption>Adjusted scene (Step 3)</figcaption>
+		<div class="svg-border">
+			<style>
+				/* Scoped styles for adjusted SVG only */
+				#scene-adjusted rect, #scene-adjusted ellipse, #scene-adjusted circle, #scene-adjusted polygon, #scene-adjusted path, #scene-adjusted line, #scene-adjusted polyline {
+					shape-rendering: geometricPrecision;
+				}
+				#scene-adjusted .house {
+					/* Improved contrast for house body */
+					fill: #ffd9a0;
+					stroke: #a0522d;
+					stroke-width: 4;
+				}
+				#scene-adjusted .roof {
+					fill: #8b4513;
+					stroke: #5a2d0c;
+					stroke-width: 5;
+				}
+				#scene-adjusted .chimney {
+					fill: #b0b0b0;
+					stroke: #555;
+					stroke-width: 3;
+				}
+				#scene-adjusted .door {
+					fill: #7c4a1e;
+					stroke: #3e210c;
+					stroke-width: 3;
+				}
+				#scene-adjusted .window {
+					fill: #e0f7fa;
+					stroke: #00796b;
+					stroke-width: 2.5;
+				}
+				#scene-adjusted .tree-foliage {
+					fill: #228b22;
+					stroke: #145214;
+					stroke-width: 4;
+				}
+				#scene-adjusted .tree-trunk {
+					fill: #8d5524;
+					stroke: #5a3c1b;
+					stroke-width: 3;
+				}
+				#scene-adjusted .fence {
+					stroke: #b5651d;
+					stroke-width: 7;
+					stroke-dasharray: 16 8;
+				}
+				#scene-adjusted .footpath {
+					stroke: #888;
+					stroke-width: 10;
+					fill: none;
+				}
+				#scene-adjusted .mailbox-body {
+					fill: #e53935;
+					stroke: #b71c1c;
+					stroke-width: 2;
+				}
+				#scene-adjusted .mailbox-flag {
+					fill: #ffd600;
+					stroke: #bdb76b;
+					stroke-width: 2;
+				}
+				#scene-adjusted .mailbox-post {
+					fill: #8d5524;
+					stroke: #5a3c1b;
+					stroke-width: 2;
+				}
+				#scene-adjusted .smoke {
+					fill: #e0e0e0;
+					opacity: 0.7;
+				}
+			</style>
+			<svg
+				id="scene-adjusted"
+				viewBox="0 0 800 500"
+				width="800" height="500"
+				aria-labelledby="svgTitle3 svgDesc3"
+				role="img"
+			>
+				<title id="svgTitle3">House and Garden Scene (Adjusted)</title>
+				<desc id="svgDesc3">An SVG illustration with improved contrast, repositioned house and tree, dashed fence, stone footpath, mailbox, and chimney smoke.</desc>
+				<!-- Sky -->
+				<rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
+				<!-- Grass -->
+				<rect x="0" y="300" width="800" height="200" fill="#7ed957" />
+				<!-- Sun (circle) -->
+				<circle cx="100" cy="100" r="50" fill="#ffe066" stroke="#f9c74f" stroke-width="4" />
+				<!-- Sun rays (lines) -->
+				<line x1="100" y1="30" x2="100" y2="0" stroke="#f9c74f" stroke-width="4" />
+				<line x1="150" y1="100" x2="190" y2="100" stroke="#f9c74f" stroke-width="4" />
+				<line x1="100" y1="150" x2="100" y2="190" stroke="#f9c74f" stroke-width="4" />
+				<line x1="50" y1="100" x2="10" y2="100" stroke="#f9c74f" stroke-width="4" />
+				<!-- Cloud (ellipse + circles) -->
+				<ellipse cx="220" cy="80" rx="40" ry="25" fill="#fff" />
+				<circle cx="200" cy="80" r="20" fill="#fff" />
+				<circle cx="240" cy="80" r="18" fill="#fff" />
+				<!-- Tree: repositioned with translate -->
+				<g transform="translate(-40,10)">
+					<rect x="650" y="270" width="20" height="60" class="tree-trunk" />
+					<ellipse cx="660" cy="250" rx="40" ry="50" class="tree-foliage" />
+				</g>
+				<!-- House: repositioned with translate -->
+				<g transform="translate(30,0)">
+					<rect x="320" y="220" width="160" height="120" class="house" />
+					<polygon points="300,220 400,150 500,220" class="roof" />
+					<rect x="450" y="160" width="20" height="40" class="chimney" />
+					<rect x="385" y="280" width="30" height="60" class="door" />
+					<circle cx="410" cy="310" r="4" fill="#ffd700" />
+					<rect x="340" y="240" width="30" height="30" class="window" />
+					<rect x="430" y="240" width="30" height="30" class="window" />
+					<line x1="355" y1="240" x2="355" y2="270" stroke="#00796b" stroke-width="1.5" />
+					<line x1="340" y1="255" x2="370" y2="255" stroke="#00796b" stroke-width="1.5" />
+					<line x1="445" y1="240" x2="445" y2="270" stroke="#00796b" stroke-width="1.5" />
+					<line x1="430" y1="255" x2="460" y2="255" stroke="#00796b" stroke-width="1.5" />
+				</g>
+				<!-- Fence: dashed stroke -->
+				<polyline points="200,340 220,370 240,340 260,370 280,340 300,370 320,340 340,370 360,340 380,370 400,340" class="fence" fill="none" />
+				<!-- Curved garden path to door (new footpath) -->
+				<path class="footpath" d="M410,340 Q420,400 370,470 Q420,490 480,470 Q440,400 420,340" />
+				<!-- Mailbox near path (new) -->
+				<g>
+					<!-- Post -->
+					<rect x="355" y="440" width="8" height="30" class="mailbox-post" />
+					<!-- Box body -->
+					<rect x="345" y="425" width="28" height="18" rx="6" class="mailbox-body" />
+					<!-- Curved top -->
+					<path d="M345,425 Q359,410 373,425" class="mailbox-body" />
+					<!-- Flag -->
+					<polygon points="370,430 370,420 380,425" class="mailbox-flag" />
+				</g>
+				<!-- Chimney smoke (new, subtle puff) -->
+				<g>
+					<ellipse cx="500" cy="160" rx="10" ry="6" class="smoke" />
+					<ellipse cx="515" cy="150" rx="13" ry="8" class="smoke" />
+					<ellipse cx="530" cy="140" rx="16" ry="10" class="smoke" />
+				</g>
+				<!-- Caption (text) -->
+				<text x="400" y="490" text-anchor="middle" font-size="28" fill="#222" font-family="Arial, sans-serif">SVG House & Garden</text>
+			</svg>
+		</div>
+	</figure>
 </body>
 </html>
